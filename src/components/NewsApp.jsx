@@ -7,7 +7,7 @@ const NewsApp = () => {
   const [page, setPage] = useState(0);
   const getNewsData = async () => {
     const response = await fetch(
-      `https://newsapi.org/v2/top-headlines?page=${page}&pageSize=5&country=in&apiKey=04a952749fae4664b1d0611cf5a4a36f`
+      `https://corsproxy.io/?https://newsapi.org/v2/top-headlines?page=${page}&pageSize=5&country=in&apiKey=04a952749fae4664b1d0611cf5a4a36f`
     );
     const data = await response.json();
     setArticles((prevData) => [...prevData, ...data.articles]);
